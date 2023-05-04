@@ -1,32 +1,87 @@
 .inline-block {
-    display: inline-block;
-    vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
+}
+div.logo {
+  width: 23%;
+  padding: 1%;
+  text-align: center;
+}
+nav.inline-block {
+  width: 72%;
+  padding: 1%;
+}
+ul {
+  width: 50%;
+  margin-left: auto;
+}
+.heroimg {
+  padding: 25px;
+}
+.content {
+  width: 500px;
+  margin: 0 auto; 
+}
+footer {
+  background-color: #373738;
+}
+footer ul {
+  display: inline-block;
+  vertical-align: top;
+  padding: center;
+}
+div.flexContainer {
+  display: flex;
+  div: {
+    width: 33%;
+    margin: auto;
+    padding: auto;
   }
-  div.logo {
-    width: 23%;
-    padding: 1%;
-    text-align: center;
+}
+div.flexContainer {
+diplay: flex;
+flex-direction: row;
+}
+div.workGrid {
+  display: grid;
+  .div1 {
+    grid-area: Wanderer-Image
+}
+  .div2 {
+    grid-area: Wanderer
+}
+  .div3 {
+    grid-area: OOTD-Image
+}
+  .div4 {
+    grid-area: OOTD
+}
+  .div5 {
+    grid-area: DOE-Image
   }
-  nav.inline-block {
-    width: 72%;
-    padding: 1%;
+  .div6 {
+    grid-area: DOE
   }
-  ul {
-    width: 50%;
-    margin-left: auto;
+}
+.grid-container {
+  #categorygrid {
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "Wanderer-Image OOTD-Image DOE-Image" "Wanderer OOTD DOE";
+    }
+}
+@media only screen and (max-width: 600){
+  div.flexContainer {
+    flex-direction: column;
   }
-  .heroimg {
-    padding: 25px;
+  .grid-container {
+    width: 100%;
   }
-  .content {
-    width: 500px;
-    margin: 0 auto; 
+  #categoryGrid {
+    grid-template-rows: 300px 300px 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "Wanderer-Image Wanderer OOTD-Image OOTD DOE-Image DOE";
   }
-  footer {
-    background-color: #373738;
-  }
-  footer ul {
-    display: inline-block;
-    vertical-align: top;
-    padding: center;
-  }
+}
