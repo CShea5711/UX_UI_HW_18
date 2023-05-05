@@ -32,56 +32,53 @@ footer ul {
 }
 div.flexContainer {
   display: flex;
-  div: {
-    width: 33%;
-    margin: auto;
-    padding: auto;
-  }
+  width: 100%;
+  margin: auto;
+  padding: auto;
 }
 div.flexContainer {
-diplay: flex;
+display: flex;
 flex-direction: row;
 }
-div.workGrid {
-  display: grid;
-  .div1 {
-    grid-area: Wanderer-Image
+div.container1 {
+  width: 32%;
 }
-  .div2 {
-    grid-area: Wanderer
+div.container2 {
+  width: 32%;
 }
-  .div3 {
-    grid-area: OOTD-Image
+div.container3 {
+  width: 32%;
 }
-  .div4 {
-    grid-area: OOTD
+  .workitem1 {
+    grid-area: workitem1;
 }
-  .div5 {
-    grid-area: DOE-Image
-  }
-  .div6 {
-    grid-area: DOE
-  }
+  .workitem2 {
+    grid-area: workitem2;
 }
-.grid-container {
-  #categorygrid {
+  .workitem3 {
+    grid-area: workitem3;
+}
+.workGrid {
     margin: 0px;
     display: grid;
-    grid-template-rows: 300px 300px 300px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "Wanderer-Image OOTD-Image DOE-Image" "Wanderer OOTD DOE";
+    grid-template-rows: 1fr;
+    grid-template-columns: 32% 32% 32%;
+    grid-template-areas: "workitem1 workitem2 workitem3";
     }
-}
-@media only screen and (max-width: 600){
+
+@media only screen and (max-width: 600px){
   div.flexContainer {
     flex-direction: column;
   }
   .grid-container {
     width: 100%;
   }
-  #categoryGrid {
-    grid-template-rows: 300px 300px 300px 300px 300px 300px;
+  .workGrid {
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr;
-    grid-template-areas: "Wanderer-Image Wanderer OOTD-Image OOTD DOE-Image DOE";
+    grid-template-areas: 
+    "workitem1"
+    "workitem2" 
+    "workitem3";
   }
 }
